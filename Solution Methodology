@@ -1,0 +1,24 @@
+The solution segment has been divided into 7 different parts with each part representing a significant step in achieving the final result.
+Since there were 2000 different restaurants with more than 234,846 images which had to be processed, our initial task was to seggregate these images into respective business category. 
+Each business was seggregated as a folder containing the images and these were processed based on the respective business ids.
+Secondly, the images had to pre-processed before being subjected to feature extraction.
+There were various sizes and pixels of images that were present for each business.
+We pre-processed the images in such a way that all the images were re-sized based on the shorter width and also was trasnformed into a pixel size of 224*224. 
+In the third phase, we extracted the features from the images using the MXNet package. 
+There were 1000 columns of features extracted for each image corresponding to a business with probablity values ranging between 0 and 1. 
+Each feature was given a particluar weightage depending upon the charateristics of an image at every pixel. 
+The next step was to convert the features of individual images into business level features.
+There were many images corresponding to each business and all the features extracted from these images must be aggregated into a single feature representing the business.
+We calculated the mean of the features of all the images in such a way the resultant is a unique feature respresenting a business. The result of the fourth step gives 2000 unique features, each acting as a representative of all images pertaining to a business. 
+In the fifth phase, we performed Principal Component Analysis on the business features. 
+Since there were 2000 businesses each having 1000 features represented as continuous variables, we performed dimensioanlity reduction using PCA. 
+We were able to retain 91% of the variation using 500 variables which was exactly half the number of original list of variables.
+Finally, we built various classification models to classify the business features into various categories. 
+The Random Forest and XGBoost models had the best results when compared to others.
+Hence we decided to combine the results through a weighted average approach and finally classify the features into multiple categories.
+The final result had the images of a restaurant processed and based on the results, the restaurant was classified into multiple labels based on the charateristics of images.
+The initial challenge was that all the user submitted photos for all the businesses (restaurants) are placed under one directory. 
+The classification of the business and the photo (file name) is provided in a separate csv file.
+However, while training a model, it is cumbersome and inefficient to read the file every time to classify the business based on the photo. 
+To overcome this challenge, we segregated the images as the first phase of pre-processing based on the business-to-photo mapping provided in the csv file. As a result, there is a subdirectory created for every business under which all its photos are placed. 
+It is also observed that there are several invalid photos in the dataset which begins with “._” which needs to be excluded while building the model. Hence, we have excluded these photos during this segregation process, and these photos can be removed at the end of the step manually from the parent directory.
