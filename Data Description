@@ -1,0 +1,16 @@
+Dataset:
+https://www.kaggle.com/c/yelp-restaurant-photo-classification/data
+
+
+
+In the given Yelp dataset, there were 234,846 photos. These photos provide rich local business information across categories.
+In this dataset, we have been provided with photos that belong to a business and we were asked to predict the business attributes. There are 9 different attributes in this problem: 
+0: good for lunch
+1: good for dinner
+2: restaurant takes reservations
+3: outdoor seating
+4: restaurant is expensive
+5: serves alcohol
+6: has table service
+7: ambience is classy
+8: good for kids
