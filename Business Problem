@@ -1,0 +1,6 @@
+
+Currently, when the Yelp users submit a review, they can upload pictures alongside the reviews. 
+In an era of photo-centric social storytelling, Yelp's users upload an enormous number of photos alongside their reviews.
+However, when the users upload a review they need to manually select restaurant labels with appropriate categories such as good for lunch/dinner, serves alcohol, outdoor seating available, takes reservations etc. 
+Since selecting the labels is optional, many users prefer not to select the labels which leaves many of the restaurants only partially categorized. 
+The solution of this project is to build a model that reads a dataset of user submitted photos and automatically tags them with one or more labels relevant to the restaurant or business
