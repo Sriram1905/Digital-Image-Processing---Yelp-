@@ -1,5 +1,7 @@
 # Digital-Image-Processing---Yelp-
-Deep Learning using MXnet and Inception-BN in R
+Deep Learning using MXnet and Inception-BN in R:
+
+
  Yelp is a multinational company which hosts online reservation services and user reviews about the local businesses and restaurants around the world. 
  It has one of the largest online user community and hosts over 121 million user reviews, with tens of millions of photos uploaded. 
  Yelp extensively deploys analytics for its business solutions and to enhance its user experience, for instance, to recommend most helpful and relevant reviews for its users. 
