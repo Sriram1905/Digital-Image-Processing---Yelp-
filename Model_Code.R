@@ -7,7 +7,7 @@ library(Matrix)
 library(caTools)
 library(randomForest)
 library(plyr)
-dataset = read.csv("C:/Users/vineeth raghav/Downloads/Uconn/R Proj/PCA_data_target_500.csv")
+dataset = read.csv("C:/Users/sriram rajagopalan/Downloads/Uconn/R Proj/PCA_data_target_500.csv")
 
 #Training - test split
 
@@ -239,10 +239,10 @@ for (i in seq(1:nrow(rf_test_pred)))
 rf_tags = vapply(rf_tags, paste, collapse = ", ", character(1L))
 
 # Writing the Predicted Testing data & its probabilities to file Random_Forest_Test_Predictions
-write.csv(cbind(rf_test_pred,rf_test_pred_prob,rf_tags),"C:/Users/vineeth raghav/Downloads/Uconn/R Proj/Results/Random_Forest_Test_Predictions.csv")
+write.csv(cbind(rf_test_pred,rf_test_pred_prob,rf_tags),"C:/Users/sriram rajagopalan/Downloads/Uconn/R Proj/Results/Random_Forest_Test_Predictions.csv")
 
 # Writing the Predicted Training data & its probabilities to file Random_Forest_Train_Predictions
-#write.csv(cbind(rf_train_pred,rf_train_pred_prob),"C:/Users/vineeth raghav/Downloads/Uconn/R Proj/Results/Random_Forest_Train_Predictions.csv")
+#write.csv(cbind(rf_train_pred,rf_train_pred_prob),"C:/Users/sriram rajagopalan/Downloads/Uconn/R Proj/Results/Random_Forest_Train_Predictions.csv")
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -406,7 +406,7 @@ for (i in seq(1:nrow(XG_test_pred)))
 
 XG_tags = vapply(XG_tags, paste, collapse = ", ", character(1L))
 
-write.csv(cbind(XG_test_pred,XG_test_pred_prob,XG_tags),"C:/Users/vineeth raghav/Downloads/Uconn/R Proj/Results/XG_test_predictions.csv")
+write.csv(cbind(XG_test_pred,XG_test_pred_prob,XG_tags),"C:/Users/sriram rajagopalan/Downloads/Uconn/R Proj/Results/XG_test_predictions.csv")
 
 #---------------------------------------------------------------------------------------------------------------------------
 # Averaged Model: (Averaging the Probabilies of Random forest and XG Boost)
@@ -440,10 +440,10 @@ split_labels = sample.split(train$labels, SplitRatio = 0.75)
 test_labels = subset(train, split == FALSE)
 
 colnames(test_labels) <- c("Business ID","Actual Tags")
-write.csv(cbind(test_labels,rf_tags,XG_tags, Predicted_tags),"C:/Users/vineeth raghav/Downloads/Uconn/R Proj/Results/Final_Tags.csv",row.names = F)
+write.csv(cbind(test_labels,rf_tags,XG_tags, Predicted_tags),"C:/Users/sriram rajagopalan/Downloads/Uconn/R Proj/Results/Final_Tags.csv",row.names = F)
 #----------------------------------------------------------------------------------------------------------------------------
 # Final Result
 
-write.csv(cbind(test_labels,Predicted_tags),"C:/Users/vineeth raghav/Downloads/Uconn/R Proj/Results/Final_Result.csv",row.names = F)
+write.csv(cbind(test_labels,Predicted_tags),"C:/Users/sriram rajagopalan/Downloads/Uconn/R Proj/Results/Final_Result.csv",row.names = F)
 
 #-----------------------------------------------------------------------------------------------------------------------------------
