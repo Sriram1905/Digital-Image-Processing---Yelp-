@@ -6,9 +6,9 @@
 
 
 # Place the pictures and the files contaiting the folder - file mapping in the same directory as below
-source_path = "C:/Users/vineeth raghav/Downloads/Uconn/R Proj/train_photos/train_photos"
-target_path = "C:/Users/vineeth raghav/Downloads/Uconn/R Proj/train_photos/Processed_Images"
-file_name = "C:/Users/vineeth raghav/Downloads/Uconn/R Proj/train_photo_to_biz_ids/train_photo_to_biz_ids.csv"
+source_path = "C:/Users/sriram rajagopalan/Downloads/Uconn/R Proj/train_photos/train_photos"
+target_path = "C:/Users/sriram rajagopalan/Downloads/Uconn/R Proj/train_photos/Processed_Images"
+file_name = "C:/Users/sriram rajagopalan/Downloads/Uconn/R Proj/train_photo_to_biz_ids/train_photo_to_biz_ids.csv"
 file_extn= '.JPG'
 bad_file_start = c(".")
 except_folders = c("Archives")
