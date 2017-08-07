@@ -18,7 +18,7 @@ Feature_extraction = mx.model.load("F:/SEMESTER2(4subjects)/R/R Project/Project 
 
 
 rm_noise_img = as.array(mx.nd.load("F:/SEMESTER2(4subjects)/R/R Project/Project - Yelp Image Processing/Inception/Inception/mean_224.nd")[["mean_img"]])
-##train_photo_to_biz_ids <- read.csv("C:/Users/vineeth raghav/Downloads/Uconn/R Proj/train_photo_to_biz_ids/train_photo_to_biz_ids.csv")
+##train_photo_to_biz_ids <- read.csv("C:/Users/sriram rajagopalan/Downloads/Uconn/R Proj/train_photo_to_biz_ids/train_photo_to_biz_ids.csv")
 source_path = "F:/SEMESTER2(4subjects)/R/R Project/Project - Yelp Image Processing/Processed Images"
 
 myrange = 3
